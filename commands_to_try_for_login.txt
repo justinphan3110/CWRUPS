@@ -1,0 +1,3 @@
+http POST http://localhost:8000/api/auth/token/login username="phan" password='12345678'
+ ->>> "auth_token": "ea560ffd5b6a8889d8988ec92d5c7e860ff37e92"
+curl -LX GET http://127.0.0.1:8000/api/orders/ -H 'Authorization: Token ea560ffd5b6a8889d8988ec92d5c7e860ff37e92'

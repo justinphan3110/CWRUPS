@@ -1,0 +1,63 @@
+stages:
+  - test
+  - lint
+  - build
+
+before_script:
+  - pip install tox
+
+py37:
+  stage: test
+  image: python:3.7
+  allow_failure: true
+  coverage: '/Total coverage: (\d+\.\d+)%/'
+  script:
+    - tox -vv -e py37
+  artifacts:
+    paths:
+      - .tox/py37/tmp
+    when: always
+
+py38:
+  stage: test
+  image: python:3.8
+  allow_failure: true
+  coverage: '/Total coverage: (\d+\.\d+)%/'
+  script:
+    - tox -vv -e py38
+  artifacts:
+    paths:
+      - .tox/py38/tmp
+    when: always
+
+pycodestyle:
+  stage: lint
+  image: python:3.7
+  allow_failure: true
+  script:
+    - tox -vv -e pycodestyle
+
+pydocstyle:
+  stage: lint
+  image: python:3.7
+  allow_failure: true
+  script:
+    - tox -vv -e pydocstyle
+
+pylint:
+  stage: lint
+  image: python:3.7
+  allow_failure: true
+  script:
+    - tox -vv -e pylint
+
+package:
+  stage: build
+  image: python:3.7
+  script:
+    - pip install setuptools wheel
+    - python setup.py sdist bdist_wheel
+  artifacts:
+    paths:
+      - dist
+    when: always

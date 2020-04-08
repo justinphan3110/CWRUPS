@@ -1,0 +1,5 @@
+baseline
+pytest
+pytest-html
+pytest-cov
+pytest-django

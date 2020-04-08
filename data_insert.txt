@@ -1,0 +1,9 @@
+INSERT INTO `customer` VALUES (1,'Tyler','Thieding'),(2,'Elise','Epstein'),(3,'Phan','Trinh Ha'),(4,'Long','Phan');
+INSERT INTO `shipping_rate` VALUES (1,'2016-01-01 00:00:00',8.75),(1,'2018-01-01 00:00:00',9),(1,'2019-10-01 00:00:00',9.5),(2,'2016-01-01 00:00:00',5),(2,'2018-01-01 00:00:00',5.25),(2,'2019-10-01 00:00:00',5.75),(3,'2016-01-01 00:00:00',2.25),(3,'2018-01-01 00:00:00',2.75),(3,'2019-10-01 00:00:00',3.25),(4,'2016-01-01 00:00:00',0.5),(4,'2018-01-01 00:00:00',0.75),(4,'2019-10-01 00:00:00',1);
+INSERT INTO `distribution_center_address` VALUES (2,1),(3,2),(4,3);
+INSERT INTO `parcel_type` VALUES (1,'Large Package'),(2,'Small Package'),(3,'Large Envalope'),(4,'Small Envalope');
+INSERT INTO `transit_method` VALUES (1,'Delivery Van'),(2,'Truck'),(3,'Train'),(4,'Airplane'),(5,'Boat');
+INSERT INTO `transit_asset_method` VALUES (1,2),(2,2),(3,4);
+INSERT INTO `transit_hard_asset` VALUES (1,'Freightliner','Business Class M2 112','2017-07-04 00:00:00',0),(2,'Freightliner','Business Class M2e Hybrid','2019-08-26 00:00:00',1),(3,'Boeing','777 Freighter','2018-08-27 00:00:00',0);
+INSERT INTO `distribution_center` VALUES (0,'Origin Point'),(1,'Destination Point'),(2,'Cleveland, OH'),(3,'Chicago, IL'),(4,'San Fransisco, CA');
+INSERT INTO `address` VALUES (1,5300,'Riverside Dr',NULL,'Cleveland','OH',44315),(2,10000,'W OHare Ave',NULL,'Chicago','IL',60666),(3,1500,'N Access Rd',NULL,'San Fransisco','CA',94128),(4,1030,'Cascades Dr',NULL,'Aurora','OH',44202),(5,10900,'Euclid Ave',NULL,'Cleveland','OH',44106);
